@@ -22,6 +22,12 @@ type Case struct {
 	TypeID               int          `json:"type_id"`
 	UpdatedBy            int          `json:"updated_by"`
 	UdpatedOn            int          `json:"updated_on"`
+
+	CustomDescription     string `json:"custom_kube_description,omitempty"`
+	CustomAutomated       bool   `json:"custom_automated,omitempty"`
+	CustomKubeSig         string `json:"custom_kube_sig,omitempty"`
+	CustomKubeConformance bool   `json:"custom_kube_conformance,omitempty"`
+	TemplateID            int    `json:"template_id,omitempty"`
 }
 
 // CustomStep represents the custom steps
@@ -65,6 +71,12 @@ type SendableCase struct {
 	Text        string       `json:"custom_text,omitempty"`
 	URL         string       `json:"custom_url,omitempty"`
 	User        int          `json:"custom_user,omitempty"`
+
+	CustomDescription     string `json:"custom_kube_description,omitempty"`
+	CustomAutomated       bool   `json:"custom_automated,omitempty"`
+	CustomKubeSig         string `json:"custom_kube_sig,omitempty"`
+	CustomKubeConformance bool   `json:"custom_kube_conformance,omitempty"`
+	TemplateID            int    `json:"template_id,omitempty"`
 }
 
 // GetCase returns the existing Test Case caseID

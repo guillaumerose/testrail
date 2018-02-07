@@ -16,6 +16,12 @@ type Test struct {
 	StatusID         int    `json:"status_id"`
 	Title            string `json:"title"`
 	TypeID           int    `json:"type_id"`
+
+	CustomDescription     string `json:"custom_kube_description,omitempty"`
+	CustomAutomated       bool   `json:"custom_automated,omitempty"`
+	CustomKubeSig         string `json:"custom_kube_sig,omitempty"`
+	CustomKubeConformance bool   `json:"custom_kube_conformance,omitempty"`
+	TemplateID            int    `json:"template_id,omitempty"`
 }
 
 // GetTest returns the test testID
